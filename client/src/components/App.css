@@ -1,0 +1,26 @@
+.App {
+  background-color: #282c34;
+  display: flex;
+  color: white;
+  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+}
+
+div.actions {
+  flex-basis: 30%;
+  height: 100vh;
+}
+
+div.list {
+  flex-grow: 1;
+  height: 100vh;
+}
+
+span.icon.delete {
+  font-size: .7em;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}

@@ -16,3 +16,12 @@ services:
       - webmongodb
     links:
       - webmongodb
+
+  frontend:
+    build:
+      context: ./client
+    image: yata-react
+    ports:
+      - 3001:80
+    depends_on:
+      - api
