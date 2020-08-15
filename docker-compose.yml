@@ -1,0 +1,18 @@
+version: "3"
+services:
+  webmongodb:
+    image: mongo
+    container_name: "yata-mongo"
+    ports:
+      - 27017:27017
+
+  api:
+    build:
+      context: ./server
+    image: yata-springboot
+    ports:
+      - 8080:8080
+    depends_on: 
+      - webmongodb
+    links:
+      - webmongodb
